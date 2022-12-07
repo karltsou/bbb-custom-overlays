@@ -1,3 +1,7 @@
+#### CONFIG_BEAGLEBONE_PINMUX_HELPER=y
+
+### drivers/misc/cape/beaglebone/bone-pinmux-helper.c
+
 ### arch/arm/boot/dts/am335x-bone-common-univ.dtsi
 
 ```
@@ -40,7 +44,37 @@
 	};
 ```
 
+#### CONFIG_GPIO_OF_HELPER=y
 
+#### drivers/gpio/gpio-of-helper.c
+
+#### arch/arm/boot/dts/am335x-bone-common-univ.dtsi
+
+```
+# gpio input
+P9_30 {
+    gpio-name = "P9_30";
+    gpio = <&gpio3 16 0>;
+    input;
+    dir-changeable;
+};
+
+# gpio output hi
+P9_30 {
+    gpio-name = "P9_30";
+    gpio = <&gpio3 16 0>;
+    init-high;
+    dir-changeable;
+};
+
+# gpio output low
+P9_30 {
+    gpio-name = "P9_30";
+    gpio = <&gpio3 16 0>;
+    init-low;
+    dir-changeable;
+};
+```
 
 #### BB-RAYSTAR-TOUCHPAD-00A0.dts
 
