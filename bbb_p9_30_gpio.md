@@ -119,7 +119,8 @@ fragment@0 {
 			P9_15_pinmux { status = "disabled"; };	/* touch reset: gpio1_16 */
 			P9_16_pinmux { status = "disabled"; };	/* touch interrupt: gpio1_19 */
 			
-			P9_30_pinmux { pinctrl-0 = <&P9_30_gpio_pd_pin>; }; /* gpio output pull-down */
+			P9_30_pinmux { pinctrl-0 = <&P9_30_gpio_pd_pin>; }; /* default: gpio output pull-down */
+			P9_30_pinmux { mode = "gpio"; }; /* gpio: gpio output */
 		};
 	};
 ```
